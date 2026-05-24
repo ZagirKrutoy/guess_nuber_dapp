@@ -9,11 +9,29 @@ node_modules
 !.yarn/sdks
 !.yarn/versions
 
+# environment variables (никогда не коммитить реальные ключи)
+.env
+.env.local
+.env.*.local
+packages/hardhat/.env
+packages/nextjs/.env.local
+
+# hardhat artifacts & cache
+packages/hardhat/artifacts
+packages/hardhat/cache
+packages/hardhat/deployments/localhost
+
+# next.js build
+packages/nextjs/.next
+packages/nextjs/out
+
 # eslint
 .eslintcache
 
 # misc
 .DS_Store
+*.log
+npm-debug.log*
 
 # IDE
 .vscode

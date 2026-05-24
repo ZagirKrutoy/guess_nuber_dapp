@@ -104,6 +104,24 @@
   background: var(--color-base-200);
 }
 
+[data-theme="light"] {
+  --game-bg: linear-gradient(135deg, #e8eaf6, #c5cae9, #dae8ff);
+  --game-card-bg: rgba(255, 255, 255, 0.7);
+  --game-card-border: rgba(99, 102, 241, 0.2);
+  --game-text: #212638;
+  --game-text-muted: #4c5480;
+  --game-accent: #4f46e5;
+}
+
+[data-theme="dark"] {
+  --game-bg: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  --game-card-bg: rgba(255, 255, 255, 0.1);
+  --game-card-border: rgba(255, 255, 255, 0.2);
+  --game-text: #ffffff;
+  --game-text-muted: #c4b5fd;
+  --game-accent: #a78bfa;
+}
+
 .btn {
   @apply shadow-md;
   border-radius: 9999rem;
