@@ -106,8 +106,10 @@
 
 [data-theme="light"] {
   --game-bg: linear-gradient(135deg, #e8eaf6, #c5cae9, #dae8ff);
-  --game-card-bg: rgba(255, 255, 255, 0.7);
-  --game-card-border: rgba(99, 102, 241, 0.2);
+  --game-card-bg: rgba(255, 255, 255, 0.85);
+  --game-card-border: rgba(99, 102, 241, 0.25);
+  --game-input-bg: #ffffff;
+  --game-input-border: #a5b4fc;
   --game-text: #212638;
   --game-text-muted: #4c5480;
   --game-accent: #4f46e5;
@@ -115,8 +117,10 @@
 
 [data-theme="dark"] {
   --game-bg: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  --game-card-bg: rgba(255, 255, 255, 0.1);
-  --game-card-border: rgba(255, 255, 255, 0.2);
+  --game-card-bg: rgba(255, 255, 255, 0.08);
+  --game-card-border: rgba(255, 255, 255, 0.15);
+  --game-input-bg: rgba(255, 255, 255, 0.15);
+  --game-input-border: rgba(167, 139, 250, 0.5);
   --game-text: #ffffff;
   --game-text-muted: #c4b5fd;
   --game-accent: #a78bfa;

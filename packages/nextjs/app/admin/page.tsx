@@ -59,8 +59,8 @@ export default function AdminPage() {
             onChange={e => setNewNumber(e.target.value)}
             className={inputClass}
             style={{
-              background: "var(--game-card-bg)",
-              border: "1px solid var(--game-card-border)",
+              background: "var(--game-input-bg)",
+              border: "1px solid var(--game-input-border)",
               color: "var(--game-text)",
             }}
           />
@@ -71,8 +71,8 @@ export default function AdminPage() {
             onChange={e => setNewSalt(e.target.value)}
             className={inputClass}
             style={{
-              background: "var(--game-card-bg)",
-              border: "1px solid var(--game-card-border)",
+              background: "var(--game-input-bg)",
+              border: "1px solid var(--game-input-border)",
               color: "var(--game-text)",
             }}
           />
@@ -85,8 +85,8 @@ export default function AdminPage() {
             onChange={e => setMaxAtt(e.target.value)}
             className={inputClass}
             style={{
-              background: "var(--game-card-bg)",
-              border: "1px solid var(--game-card-border)",
+              background: "var(--game-input-bg)",
+              border: "1px solid var(--game-input-border)",
               color: "var(--game-text)",
             }}
           />

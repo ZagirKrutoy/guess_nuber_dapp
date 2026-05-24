@@ -140,8 +140,8 @@ export default function GuessPage() {
               placeholder="Введите число (0–100)"
               className="w-full px-4 py-3 rounded-xl text-center text-xl focus:outline-none transition"
               style={{
-                background: "var(--game-card-bg)",
-                border: "1px solid var(--game-card-border)",
+                background: "var(--game-input-bg)",
+                border: "1px solid var(--game-input-border)",
                 color: "var(--game-text)",
               }}
             />
