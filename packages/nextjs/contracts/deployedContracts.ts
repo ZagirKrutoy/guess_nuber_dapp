@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     GuessNumber: {
-      address: "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      address: "0x59b670e9fa9d0a427751af201d676719a970857b",
       abi: [
         {
           inputs: [
@@ -104,6 +104,11 @@ const deployedContracts = {
         {
           inputs: [
             {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+            {
               internalType: "address",
               name: "",
               type: "address",
@@ -128,6 +133,19 @@ const deployedContracts = {
               internalType: "bool",
               name: "",
               type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "gameId",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
             },
           ],
           stateMutability: "view",
@@ -177,6 +195,11 @@ const deployedContracts = {
         },
         {
           inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
             {
               internalType: "address",
               name: "",
@@ -271,7 +294,7 @@ const deployedContracts = {
         },
       ],
       inheritedFunctions: {},
-      deployedOnBlock: 1,
+      deployedOnBlock: 28,
     },
     YourContract: {
       address: "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",

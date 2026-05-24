@@ -27,7 +27,8 @@ describe("GuessNumber", function () {
 
     await guessNumber.connect(player1).makeGuess(99n, SALT);
 
-    const used = await guessNumber.attemptsUsed(player1.address);
+    const gameId = await guessNumber.gameId();
+    const used = await guessNumber.attemptsUsed(gameId, player1.address);
     expect(used).to.equal(1);
 
     const left = await guessNumber.getAttemptsLeft(player1.address);
@@ -90,5 +91,23 @@ describe("GuessNumber", function () {
 
     expect(await guessNumber.gameActive()).to.equal(true);
     expect(await guessNumber.winner()).to.equal(ZeroAddress);
+  });
+
+  // ── Тест 7: после resetGame попытки игроков обнуляются ────────────────────
+  it("should reset player attempts after resetGame", async function () {
+    const { guessNumber, owner, player1 } = await networkHelpers.loadFixture(deployFixture);
+
+    // player1 тратит все попытки
+    for (let i = 0; i < MAX_ATTEMPTS; i++) {
+      await guessNumber.connect(player1).makeGuess(999n, SALT);
+    }
+    expect(await guessNumber.getAttemptsLeft(player1.address)).to.equal(0);
+
+    // owner сбрасывает игру
+    const newHash = solidityPackedKeccak256(["uint256", "string"], [7n, "newsalt"]);
+    await guessNumber.connect(owner).resetGame(newHash, MAX_ATTEMPTS);
+
+    // после сброса попытки player1 обнулены
+    expect(await guessNumber.getAttemptsLeft(player1.address)).to.equal(MAX_ATTEMPTS);
   });
 });
